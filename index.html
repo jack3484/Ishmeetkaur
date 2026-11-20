@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ishmeet Kaur — Social Media, Creator Marketing and On-Camera Storytelling.">
+  <title>Ishmeet Kaur | Social Media &amp; Creator Marketing Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#241b22; --paper:#f5eee4; --blue:#7a315c; --pink:#efa284; --lime:#d9bd69; --line:rgba(36,27,34,.2); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:82px; }
+    body { margin:0; background-color:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; overflow-x:hidden; }
+    a { color:inherit; }
+    .wrap { max-width:1320px; margin:auto; padding:0 30px; }
+    main.wrap { background-color:var(--paper); background-image:radial-gradient(rgba(36,27,34,.15) .85px,transparent .95px); background-size:19px 19px; }
+    .site-header { position:sticky; top:0; z-index:50; background:rgba(245,238,228,.9); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+    .nav { padding:18px 0; display:flex; justify-content:space-between; align-items:center; gap:18px; font-family:"DM Mono",monospace; font-size:12px; letter-spacing:.03em; }
+    .nav > strong { flex:none; }
+    .nav-links { display:flex; align-items:center; gap:18px; }
+    .nav a { text-decoration:none; border-bottom:1px solid var(--ink); white-space:nowrap; }
+    .hero { min-height:clamp(620px,78vh,850px); display:grid; grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr); gap:clamp(28px,5vw,72px); align-items:center; position:relative; }
+    .hero:before { content:""; position:absolute; width:170px; height:170px; right:33%; top:12%; border:1px dashed rgba(122,49,92,.22); border-radius:48% 52% 61% 39%; transform:rotate(-16deg); pointer-events:none; }
+    .hero > div:first-child { position:relative; z-index:1; max-width:700px; }
+    .eyebrow, .kicker { font:500 11px/1.2 "DM Mono",monospace; text-transform:uppercase; letter-spacing:.08em; }
+    h1 { font:700 clamp(56px,7.4vw,108px)/.92 "DM Sans",sans-serif; margin:20px 0 26px; letter-spacing:-.045em; word-spacing:0; max-width:850px; }
+    h1 span { color:var(--blue); display:inline; font-style:italic; margin-left:.06em; }
+    .hero-role { margin:-14px 0 18px; color:var(--blue); font:500 clamp(12px,1.4vw,15px)/1.3 "DM Mono",monospace; letter-spacing:.015em; }
+    .intro { max-width:480px; font-size:clamp(17px,2vw,23px); line-height:1.22; letter-spacing:-.035em; }
+    .hand { display:inline-block; color:var(--blue); font-family:"DM Sans",sans-serif; font-style:italic; transform:rotate(-4deg); }
+    .hero-actions { display:flex; gap:12px; margin-top:32px; flex-wrap:wrap; }
+    .button { display:inline-flex; align-items:center; gap:9px; padding:13px 17px; border:1px solid var(--ink); border-radius:100px; text-decoration:none; font:500 12px "DM Mono",monospace; transition:.3s ease; }
+    .hero-proof { display:flex; flex-wrap:wrap; gap:8px 17px; margin-top:20px; color:rgba(36,27,34,.76); font:10px "DM Mono",monospace; letter-spacing:.01em; }
+    .hero-proof span { display:inline-flex; align-items:baseline; gap:5px; }
+    .hero-proof span + span:before { content:"·"; margin-right:8px; color:var(--pink); font-size:16px; }
+    .hero-proof strong { color:var(--blue); font:600 12px "DM Mono",monospace; }
+    .scroll-cue { position:absolute; left:30px; bottom:18px; display:flex; align-items:center; gap:8px; color:var(--blue); font:500 9px "DM Mono",monospace; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; white-space:nowrap; }
+    .scroll-cue span { display:inline-block; color:var(--ink); font-size:15px; animation:cueNudge 1.4s ease-in-out infinite; }
+    @media (hover:hover) and (pointer:fine) { .button:hover { background:var(--blue); color:white; transform:translateY(-4px) rotate(-1deg); box-shadow:5px 6px 0 var(--ink); } }
+    .photo-space { width:min(100%,410px); justify-self:end; min-height:0; aspect-ratio:4/4.8; border:1px solid var(--ink); background:var(--pink); position:relative; overflow:hidden; transform:rotate(.8deg); }
+    .photo-space:before { content:"ISHMEET / ON CAMERA"; position:absolute; top:16px; left:16px; font:11px "DM Mono",monospace; z-index:2; }
+    .photo-space:after { content:"✦"; position:absolute; right:22px; bottom:16px; color:var(--blue); font-size:54px; }
+    .photo-space img { position:absolute; width:100%; height:100%; object-fit:cover; object-position:center top; inset:0; z-index:1; }
+    .photo-note { position:absolute; bottom:16px; left:14px; width:fit-content; max-width:calc(100% - 28px); padding:9px 28px 9px 13px; border-left:3px solid var(--blue); background:rgba(245,238,228,.96); box-shadow:3px 4px 0 rgba(36,27,34,.18); font:600 clamp(16px,1.8vw,20px)/1.05 "DM Sans",sans-serif; letter-spacing:-.04em; z-index:2; color:var(--ink); transition:transform .28s ease,box-shadow .28s ease; }
+    .photo-note em { display:block; margin-top:2px; color:var(--blue); font:600 clamp(20px,2vw,24px)/.95 "Caveat",cursive; letter-spacing:0; }
+    .photo-note:after { content:"✳"; position:absolute; top:-10px; right:8px; color:var(--pink); font:17px/1 "DM Sans",sans-serif; transform:rotate(-12deg); }
+    @media (hover:hover) and (pointer:fine) { .photo-space:hover .photo-note { transform:translateY(-4px) rotate(-1deg); box-shadow:4px 7px 0 rgba(36,27,34,.2); } }
+    .orbit { position:absolute; bottom:35px; left:44%; width:82px; height:82px; border:1px solid var(--ink); border-radius:50%; display:grid; place-items:center; background:var(--lime); font:11px "DM Mono",monospace; transform:rotate(-12deg); animation:float 8s ease-in-out infinite; }
+    section { padding:clamp(76px,8vw,108px) 0; border-top:1px solid var(--line); position:relative; }
+    section:nth-of-type(even):not(.contact):after { content:"✦"; position:absolute; right:4%; top:24px; color:rgba(122,49,92,.22); font-size:24px; transform:rotate(14deg); }
+    .section-head { display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:36px; }
+    h2 { font:700 clamp(43px,5.4vw,78px)/.95 "DM Sans",sans-serif; letter-spacing:-.03em; word-spacing:.05em; margin:0; }
+    .section-copy { max-width:500px; margin:8px 0 0; font-size:18px; line-height:1.35; letter-spacing:-.025em; }
+    .about { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(18px,3vw,34px); align-items:stretch; }
+    .about-card { background:var(--blue); color:#fff; padding:clamp(24px,3vw,35px); min-height:340px; display:flex; flex-direction:column; align-items:flex-start; transform:rotate(-.5deg); }
+    .about-card p { max-width:440px; font:600 clamp(24px,3.2vw,41px)/1.06 "DM Sans",sans-serif; letter-spacing:-.02em; margin:0; }
+    .about-card .about-card-note { max-width:390px; margin:24px 0 auto; font:400 15px/1.5 "DM Sans",sans-serif; letter-spacing:0; color:rgba(255,255,255,.9); }
+    .about-card .kicker { margin-top:28px; }
+    .scribble { color:var(--lime); font-style:italic; }
+    .service-panel-head { margin:0 0 14px; }
+    .service-panel-head h3 { margin:7px 0 0; font:600 clamp(19px,2vw,25px)/1.1 "DM Sans",sans-serif; letter-spacing:-.025em; }
+    .service-panel-head .kicker { color:var(--blue); }
+    .mini-list { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+    .mini-list .service-card { position:relative; z-index:0; background:var(--paper); padding:20px; min-height:132px; font-size:14px; line-height:1.35; transition:background-color .24s ease,transform .24s cubic-bezier(.2,.7,.2,1),box-shadow .24s ease; }
+    .mini-list .service-label { display:flex; align-items:center; gap:7px; margin-bottom:14px; font:11px "DM Mono",monospace; color:var(--blue); }
+    .service-icon { width:16px; height:16px; flex:none; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; transition:transform .28s cubic-bezier(.2,.7,.2,1); }
+    .mini-list strong { display:block; font:600 15px/1.25 "DM Sans",sans-serif; letter-spacing:-.01em; }
+    @media (hover:hover) and (pointer:fine) {
+      .mini-list .service-card:hover { z-index:1; background:#fffaf3; transform:translateY(-3px); box-shadow:0 6px 16px rgba(36,27,34,.08); }
+      .mini-list .service-card:hover .service-icon { transform:translateY(-1px) rotate(-6deg); }
+    }
+    .growth-proof { margin:0 0 38px; padding:18px 0 16px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .growth-proof-head { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:12px; }
+    .growth-proof h3 { margin:0; font:600 clamp(20px,2.4vw,28px)/1.1 "DM Sans",sans-serif; letter-spacing:-.025em; }
+    .growth-proof-head span,.growth-period { color:var(--blue); font:10px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.05em; }
+    .growth-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .growth-stat { display:flex; align-items:baseline; gap:12px; padding:12px 18px 8px 0; }
+    .growth-stat + .growth-stat { padding-left:20px; border-left:1px solid var(--line); }
+    .growth-stat strong { display:inline-flex; align-items:baseline; white-space:nowrap; font:700 clamp(34px,4.2vw,56px)/.95 "DM Sans",sans-serif; font-variant-numeric:tabular-nums; letter-spacing:-.045em; color:var(--blue); }
+    .growth-odometer { display:inline-flex; height:1em; overflow:hidden; vertical-align:bottom; line-height:1; }
+    .growth-digit { display:block; width:.58em; height:1em; overflow:hidden; }
+    .growth-digit-rail { display:flex; flex-direction:column; transform:translateY(calc(var(--digit-start) * -1em)); }
+    .growth-digit-rail span { display:block; height:1em; line-height:1em; text-align:center; }
+    .growth-stat strong.is-rolling .growth-digit-rail { transform:translateY(calc(var(--digit-end) * -1em)); transition:transform 1.35s cubic-bezier(.2,.75,.25,1); }
+    .growth-stat > span { font-size:13px; line-height:1.2; }
+    .execution-proof { margin:12px 0 0; padding-top:12px; border-top:1px solid var(--line); font:11px "DM Mono",monospace; letter-spacing:.02em; }
+    .growth-period { margin:14px 0 0; color:var(--ink); }
+    .brands { display:flex; flex-wrap:wrap; gap:11px; }
+    .brand { padding:10px 20px 10px 11px; border:1px solid var(--ink); border-radius:100px; font:600 18px "DM Sans",sans-serif; letter-spacing:-.04em; transition:.25s ease; display:flex; align-items:center; gap:10px; }
+    @media (hover:hover) and (pointer:fine) {
+      .brand:nth-child(odd):hover { background:var(--pink); transform:translateY(-2px); }
+      .brand:nth-child(even):hover { background:var(--lime); transform:translateY(-2px); }
+    }
+    .brand img { width:28px; height:28px; flex:none; object-fit:contain; border-radius:50%; background:white; padding:2px; }
+    .brand img.wordmark { width:88px; height:32px; flex:none; object-fit:contain; border-radius:0; background:transparent; padding:0; }
+    .work-intro { max-width:680px; }
+    .work-tabs { display:flex; gap:8px; flex-wrap:wrap; margin:26px 0 6px; }
+    .work-tabs button { display:inline-flex; align-items:center; gap:9px; padding:10px 15px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.24); color:var(--ink); font:600 12px/1 "DM Sans",sans-serif; letter-spacing:-.01em; cursor:pointer; transition:background .2s ease,transform .2s ease,border-color .2s ease; }
+    .work-tabs button > span { display:inline-grid; min-width:21px; height:21px; place-items:center; border:1px solid currentColor; border-radius:50%; font:500 9px/1 "DM Mono",monospace; opacity:.88; }
+    .work-tabs .platform-icon { width:17px; height:17px; flex:none; }
+    .work-tabs .youtube-mark { fill:currentColor; }
+    .work-tabs .youtube-mark-play { fill:var(--paper); }
+    .work-tabs button[aria-selected="true"] .youtube-mark-play { fill:var(--blue); }
+    @media (hover:hover) and (pointer:fine) { .work-tabs button:hover { transform:translateY(-2px); } }
+    .work-tabs button[aria-selected="true"] { background-color:var(--blue); background-image:radial-gradient(rgba(245,238,228,.24) .7px,transparent .85px); background-size:8px 8px; border-color:var(--blue); color:var(--paper); box-shadow:inset 0 0 0 1px rgba(245,238,228,.12); }
+    .work-tabs button[aria-selected="true"] > span { border-color:rgba(245,238,228,.55); background:rgba(245,238,228,.08); }
+    .work-tabs button:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
+    .reel-category-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 24px; }
+    .reel-category-tabs button { display:inline-flex; align-items:center; gap:8px; min-height:34px; padding:7px 12px; border:1px solid var(--line); border-radius:999px; background-color:rgba(255,255,255,.2); background-image:radial-gradient(rgba(36,27,34,.07) .6px,transparent .75px); background-size:8px 8px; color:var(--ink); font:600 11px/1 "DM Sans",sans-serif; letter-spacing:-.01em; cursor:pointer; transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease; }
+    .reel-category-tabs button span { display:inline-grid; min-width:20px; height:19px; padding:0 5px; place-items:center; border-radius:999px; background:rgba(36,27,34,.07); color:var(--ink); font:500 9px/1 "DM Mono",monospace; }
+    .reel-category-tabs button[data-category="brand"][aria-selected="true"] { background-color:var(--pink); background-image:radial-gradient(rgba(36,27,34,.13) .65px,transparent .8px); background-size:8px 8px; border-color:rgba(36,27,34,.5); color:var(--ink); box-shadow:0 2px 0 rgba(36,27,34,.12); }
+    .reel-category-tabs button[data-category="lifestyle"][aria-selected="true"] { background-color:var(--lime); background-image:radial-gradient(rgba(36,27,34,.13) .65px,transparent .8px); background-size:8px 8px; border-color:rgba(36,27,34,.5); color:var(--ink); box-shadow:0 2px 0 rgba(36,27,34,.12); }
+    .category-tab-icon { width:16px; height:16px; flex:none; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+    .reel-category-tabs button:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
+    @media (hover:hover) and (pointer:fine) { .reel-category-tabs button:hover { transform:translateY(-2px); } }
+    .work-tabpanel[hidden] { display:none !important; }
+    .reel-category-panel[hidden] { display:none !important; }
+    .tab-content-entering { animation:tabPanelIn .36s cubic-bezier(.22,.7,.2,1) both; }
+    .work-tabpanel.tab-content-entering .work-card,.reel-category-panel.tab-content-entering .work-card { animation:reelCardIn .34s cubic-bezier(.22,.7,.2,1) both; }
+    .work-tabpanel.tab-content-entering .work-card:nth-child(2),.reel-category-panel.tab-content-entering .work-card:nth-child(2) { animation-delay:30ms; }
+    .work-tabpanel.tab-content-entering .work-card:nth-child(3),.reel-category-panel.tab-content-entering .work-card:nth-child(3) { animation-delay:60ms; }
+    .work-tabpanel.tab-content-entering .work-card:nth-child(4),.reel-category-panel.tab-content-entering .work-card:nth-child(4) { animation-delay:90ms; }
+    .work-tabpanel.tab-content-entering .work-card:nth-child(5),.reel-category-panel.tab-content-entering .work-card:nth-child(5) { animation-delay:120ms; }
+    .work-tabpanel.tab-content-entering .work-card:nth-child(6),.reel-category-panel.tab-content-entering .work-card:nth-child(6) { animation-delay:150ms; }
+    @keyframes tabPanelIn { from { opacity:0; transform:translateY(9px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes reelCardIn { from { opacity:0; transform:translateY(10px) scale(.99); } to { opacity:1; transform:translateY(0) scale(1); } }
+    .work-category { margin-top:42px; scroll-margin-top:24px; }
+    .category-head { display:flex; align-items:baseline; gap:14px; margin-bottom:18px; border-bottom:1px solid var(--line); padding-bottom:12px; }
+    .category-number { color:var(--blue); font:11px "DM Mono",monospace; }
+    .category-head h3 { margin:0; font:600 clamp(24px,3vw,36px)/1 "DM Sans",sans-serif; }
+    .category-head p { margin:0 0 0 auto; font:11px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.04em; }
+    .work-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+    .work-grid.reels-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(12px,1.5vw,18px); }
+    .reel-subsection + .reel-subsection { margin-top:34px; }
+    .reel-category-panel + .reel-category-panel { margin-top:0; }
+    .reel-subsection-head { display:flex; justify-content:space-between; align-items:center; gap:16px; margin:8px 0 16px; }
+    .reel-heading-lockup { display:flex; align-items:center; gap:12px; }
+    .reel-doodle { width:38px; height:38px; flex:none; display:grid; place-items:center; border:1px solid var(--ink); border-radius:50%; background:var(--lime); color:var(--blue); font-size:20px; transition:transform .25s ease; }
+    @media (hover:hover) and (pointer:fine) { .reel-subsection:hover .reel-doodle { transform:rotate(10deg); } }
+    #lifestyle-reels .reel-doodle { background:var(--pink); }
+    .reel-kicker { display:block; margin-bottom:4px; color:var(--blue); font:10px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.06em; }
+    .reel-subsection-head h4 { margin:0; font:600 clamp(22px,2.6vw,30px)/1 "DM Sans",sans-serif; }
+    .reel-count { padding:7px 10px; border:1px solid var(--line); border-radius:999px; font:10px "DM Mono",monospace; white-space:nowrap; }
+    .work-card { min-width:0; padding:0; border:0; background:transparent; color:var(--ink); text-align:left; font:inherit; cursor:pointer; transition:transform .2s ease; }
+    .work-thumb { aspect-ratio:16/9; position:relative; display:block; overflow:hidden; border:1px solid var(--ink); background:#8b5a70; }
+    .work-card:nth-child(3n+2) .work-thumb { background:#b27b76; }
+    .work-card:nth-child(3n) .work-thumb { background:#9b8053; }
+    .work-thumb img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; transition:transform .3s ease; }
+    .work-thumb.is-fallback:before { content:"✳"; position:absolute; left:50%; top:50%; color:rgba(255,255,255,.8); font:36px "DM Sans",sans-serif; transform:translate(-50%,-50%) rotate(-12deg); }
+    .work-card.is-reel .work-thumb { aspect-ratio:9/16; }
+    .reel-stamp { position:absolute; z-index:2; top:9px; left:9px; padding:6px 8px; border:1px solid rgba(255,255,255,.75); border-radius:999px; background:rgba(36,27,34,.48); color:white; font:8px "DM Mono",monospace; letter-spacing:.06em; text-transform:uppercase; transition:transform .25s ease,background .25s ease; }
+    @media (hover:hover) and (pointer:fine) {
+      .work-card:hover { transform:translateY(-2px); }
+      .work-card.is-reel:hover { transform:translateY(-2px); }
+      .work-card.is-reel:hover .reel-stamp { background:rgba(122,49,92,.86); }
+      .work-card:hover .work-thumb img { transform:scale(1.02); }
+    }
+    .scroll-reveal-ready,.work-card.reveal-ready { opacity:0; transform:translateY(14px); }
+    .scroll-reveal-ready.revealed,.work-card.reveal-ready.revealed { opacity:1; transform:translateY(0); transition:opacity .5s cubic-bezier(.22,.7,.2,1) var(--reveal-delay,0ms),transform .5s cubic-bezier(.22,.7,.2,1) var(--reveal-delay,0ms); }
+    .work-play { position:absolute; z-index:2; inset:0; margin:auto; width:54px; height:54px; display:grid; place-items:center; padding-left:3px; border:1px solid rgba(255,255,255,.9); border-radius:50%; background:rgba(36,27,34,.45); color:white; font-size:18px; opacity:0; transform:scale(.88); transition:opacity .2s ease,transform .2s ease; }
+    .work-card:focus-visible .work-play { opacity:1; transform:scale(1); }
+    @media (hover:hover) and (pointer:fine) { .work-card:hover .work-play { opacity:1; transform:scale(1); } }
+    .work-card:focus-visible { outline:2px solid var(--blue); outline-offset:4px; }
+    .work-meta { display:flex; justify-content:space-between; gap:10px; margin-top:10px; font:10px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.05em; }
+    .work-label { display:block; margin-top:6px; font:600 clamp(15px,1.35vw,18px)/1.2 "DM Sans",sans-serif; }
+    dialog.video-modal { width:min(900px,calc(100vw - 32px)); max-width:none; padding:14px; border:1px solid var(--ink); background:var(--paper); color:var(--ink); box-shadow:12px 14px 0 rgba(36,27,34,.26); animation:modalIn .2s ease-out; }
+    dialog.video-modal.is-reel { width:min(500px,calc(100vw - 24px)); }
+    dialog.video-modal::backdrop { background:rgba(36,27,34,.78); backdrop-filter:blur(4px); }
+    .modal-top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:2px 2px 12px; font:11px "DM Mono",monospace; text-transform:uppercase; }
+    .modal-close { border:1px solid var(--ink); border-radius:50%; width:36px; height:36px; background:transparent; color:var(--ink); font-size:20px; cursor:pointer; }
+    .modal-frame { display:block; width:100%; aspect-ratio:16/9; border:0; background:#17141a; }
+    .video-modal.is-reel .modal-frame { width:min(100%,420px); height:min(68vh,720px); aspect-ratio:9/16; margin:auto; }
+    .modal-footer { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:12px 2px 2px; font:11px "DM Mono",monospace; }
+    .modal-footer a { text-decoration-thickness:1px; text-underline-offset:3px; }
+    .experience { position:relative; width:min(100%,1040px); margin:0 auto; }
+    .experience-route { position:absolute; z-index:0; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; }
+    .experience-route-base,.experience-route-progress { fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .experience-route-base { stroke:var(--pink); stroke-width:6; stroke-dasharray:1 11; opacity:.95; }
+    .experience-route-progress { stroke:var(--blue); stroke-width:2; stroke-dasharray:1 1; stroke-dashoffset:1; transition:stroke-dashoffset .24s ease; }
+    .experience-step { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,1fr) 58px minmax(0,1fr); gap:12px; align-items:center; padding:18px 0; }
+    .experience-index { grid-column:2; grid-row:1; position:relative; z-index:1; width:48px; height:48px; display:grid; place-items:center; justify-self:center; padding:0; border:2px solid var(--paper); outline:1px solid var(--blue); border-radius:44% 56% 52% 48% / 48% 43% 57% 52%; background:var(--lime); color:var(--ink); font:600 12px "DM Mono",monospace; cursor:pointer; transition:transform .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease; }
+    .experience-index:focus-visible { outline:2px solid var(--ink); outline-offset:5px; }
+    .experience-icon { position:absolute; width:13px; height:13px; left:50%; top:-5px; transform:translateX(-50%); color:var(--pink); fill:var(--paper); }
+    .experience-step:nth-of-type(odd) .experience-index { transform:translateX(-13px) rotate(-8deg); }
+    .experience-step:nth-of-type(even) .experience-index { background:var(--pink); transform:translateX(13px) rotate(7deg); }
+    .experience-step.is-current .experience-index { background:var(--blue); color:var(--paper); transform:translateX(var(--level-shift,0)) scale(1.12) rotate(-5deg); box-shadow:0 0 0 5px rgba(122,49,92,.12),0 0 22px rgba(239,162,132,.58); animation:levelPop .2s cubic-bezier(.2,1.5,.5,1) both; }
+    .experience-step.is-current .experience-index:after { content:""; position:absolute; inset:-8px; border:1px dashed rgba(122,49,92,.4); border-radius:inherit; animation:levelRing 1.25s ease-out infinite; pointer-events:none; }
+    .experience-step.is-preview .experience-index { background:var(--blue); color:var(--paper); transform:translateX(var(--level-shift,0)) scale(1.16) rotate(4deg); box-shadow:0 0 0 5px rgba(122,49,92,.12),0 0 24px rgba(239,162,132,.66); }
+    .experience-step.is-preview .experience-index:after { content:""; position:absolute; inset:-8px; border:1px dashed rgba(122,49,92,.4); border-radius:inherit; animation:levelRing 1.25s ease-out infinite; pointer-events:none; }
+    .experience-step:nth-of-type(odd) { --level-shift:-13px; }
+    .experience-step:nth-of-type(even) { --level-shift:13px; }
+    .experience-step:nth-of-type(odd) .experience-copy { grid-column:1; }
+    .experience-step:nth-of-type(even) .experience-copy { grid-column:3; }
+    .experience-step:first-of-type .experience-copy { padding:25px; }
+    .experience-step:first-of-type h3 { font-size:clamp(30px,3.7vw,46px); line-height:.98; }
+    .experience-step:first-of-type .experience-summary { font-size:18px; line-height:1.35; }
+    .experience-step:nth-of-type(2) .experience-copy { padding:25px 24px; }
+    .experience-step:nth-of-type(2) h3 { font-size:clamp(25px,2.8vw,35px); }
+    .experience-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; margin:17px 0 4px; }
+    .experience-flow span { min-width:0; padding:9px 8px; border:1px solid var(--line); background:rgba(239,162,132,.1); font:10px/1.3 "DM Mono",monospace; }
+    .experience-flow span:not(:last-child):after { content:" ↗"; color:var(--blue); }
+    .experience-campaign-note { margin:17px 0 0; padding-top:12px; border-top:1px solid var(--line); color:rgba(36,27,34,.78); font-size:13px; line-height:1.4; }
+    .experience-proof { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:17px 0 18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .experience-proof div { min-width:0; padding:11px 10px 10px 0; }
+    .experience-proof div + div { padding-left:12px; border-left:1px solid var(--line); }
+    .experience-proof strong { display:block; color:var(--blue); font:700 clamp(22px,2.8vw,32px)/1 "DM Sans",sans-serif; letter-spacing:-.05em; }
+    .experience-proof span { display:block; margin-top:5px; font:9px/1.3 "DM Mono",monospace; text-transform:uppercase; letter-spacing:.03em; }
+    .experience-highlight-label { margin:20px 0 9px; color:var(--blue); font:10px "DM Mono",monospace; letter-spacing:.06em; text-transform:uppercase; }
+    .experience-highlights { display:flex; flex-wrap:wrap; gap:7px; }
+    .experience-highlight { padding:7px 10px; border:1px solid var(--line); border-radius:999px; font-size:12px; line-height:1; }
+    .experience-brands { margin-top:14px; font:600 13px/1.6 "DM Sans",sans-serif; }
+    .experience-photos-label { margin:20px 0 8px; color:var(--blue); font:10px "DM Mono",monospace; letter-spacing:.06em; text-transform:uppercase; }
+    .experience-copy { min-width:0; padding:21px 22px; border:1px solid var(--line); border-top:2px solid var(--pink); background:var(--paper); transition:border-color .3s ease,background .3s ease,transform .3s ease; }
+    .experience-step:nth-of-type(even) .experience-copy { border-top-color:var(--blue); }
+    .experience-step.is-current .experience-copy { background:rgba(255,255,255,.48); border-color:rgba(122,49,92,.38); }
+    .experience-meta { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:13px; }
+    .experience time { color:var(--blue); font:10px/1.35 "DM Mono",monospace; letter-spacing:.04em; }
+    .experience-mark { min-width:36px; display:flex; align-items:center; justify-content:center; }
+    .experience-logo { width:30px; height:30px; object-fit:contain; }
+    .experience-logo.wordmark { width:76px; max-width:100%; height:28px; object-fit:contain; }
+    .experience h3 { position:relative; width:fit-content; max-width:100%; margin:0 0 13px; font:600 clamp(21px,2.5vw,31px)/1.04 "DM Sans",sans-serif; letter-spacing:-.025em; }
+    .experience h3:after { content:""; position:absolute; left:0; right:14%; bottom:-5px; height:4px; background:center/100% 100% no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 7'%3E%3Cpath d='M1 5 Q 12 1 24 4 T 49 4 T 74 3 T 99 2' fill='none' stroke='%23efa284' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
+    .journey-script { display:inline-block; color:var(--blue); font:600 clamp(40px,5.2vw,70px)/.85 "Caveat",cursive; letter-spacing:-.025em; transform:rotate(-2deg); }
+    .journey-note { display:inline-block; margin-top:5px; color:var(--blue); font:600 23px/1 "Caveat",cursive; transform:rotate(-3deg); }
+    .journey-note:after { content:"↘"; display:inline-block; margin-left:7px; color:var(--pink); }
+    .experience-summary { margin:0; max-width:520px; font-size:16px; line-height:1.48; }
+    .experience-photos { display:flex; margin-top:16px; }
+    .experience-photo-stack { position:relative; display:block; width:166px; height:150px; padding:0; border:0; background:transparent; cursor:pointer; }
+    .experience-photo-stack img { position:absolute; top:8px; left:calc(50% - 42px); width:84px; height:112px; padding:3px; border:1px solid var(--line); background:var(--paper); box-shadow:0 3px 9px rgba(36,27,34,.14); object-fit:cover; object-position:center 28%; transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease; }
+    .experience-photo-stack img:nth-child(1) { z-index:1; transform:translate(-12px,-16px); }
+    .experience-photo-stack img:nth-child(2) { z-index:2; transform:translate(-7px,-9px); }
+    .experience-photo-stack img:nth-child(3) { z-index:3; transform:translate(-2px,-4px); }
+    .experience-photo-stack img:nth-child(4) { z-index:4; transform:translate(3px,1px); }
+    .experience-photo-stack:hover img:nth-child(1),.experience-photo-stack:focus-visible img:nth-child(1) { transform:translate(-31px,-10px) rotate(-3deg); }
+    .experience-photo-stack:hover img:nth-child(2),.experience-photo-stack:focus-visible img:nth-child(2) { transform:translate(-17px,-5px) rotate(-1deg); }
+    .experience-photo-stack:hover img:nth-child(3),.experience-photo-stack:focus-visible img:nth-child(3) { transform:translate(13px,-5px) rotate(1deg); }
+    .experience-photo-stack:hover img:nth-child(4),.experience-photo-stack:focus-visible img:nth-child(4) { transform:translate(28px,-10px) rotate(3deg); box-shadow:0 9px 18px rgba(36,27,34,.2); }
+    .experience-photo-stack:after { content:"4 photos ↗"; position:absolute; z-index:5; right:0; bottom:3px; padding:5px 8px; border:1px solid var(--line); border-radius:999px; background:var(--paper); color:var(--blue); font:9px "DM Mono",monospace; transition:transform .2s ease; }
+    .experience-photo-stack:hover:after,.experience-photo-stack:focus-visible:after { transform:translateY(3px); }
+    .experience-photo-stack:focus-visible { outline:2px solid var(--blue); outline-offset:7px; }
+    .experience-photo-modal { width:min(90vw,720px); max-width:none; max-height:90vh; padding:12px; overflow:auto; border:1px solid var(--line); background:var(--paper); color:var(--ink); }
+    .experience-photo-modal::backdrop { background:rgba(36,27,34,.78); backdrop-filter:blur(4px); }
+    .experience-photo-viewer { display:grid; grid-template-columns:42px minmax(0,1fr) 42px; align-items:center; gap:12px; }
+    .experience-photo-viewer > img { display:block; width:100%; height:min(68vh,680px); object-fit:contain; background:rgba(36,27,34,.04); }
+    .experience-photo-nav { width:40px; height:40px; border:1px solid var(--ink); border-radius:50%; background:transparent; color:var(--ink); font-size:22px; cursor:pointer; transition:background .2s ease,color .2s ease,transform .2s ease; }
+    .experience-photo-nav:hover:not(:disabled) { background:var(--blue); color:var(--paper); transform:scale(1.06); }
+    .experience-photo-nav:disabled { opacity:.3; cursor:default; }
+    .experience-photo-count { margin-top:10px; text-align:center; color:var(--blue); font:11px "DM Mono",monospace; }
+    .experience-photo-close { display:block; margin:0 0 8px auto; width:34px; height:34px; border:1px solid var(--ink); border-radius:50%; background:transparent; color:var(--ink); font-size:20px; cursor:pointer; }
+    .experience-step.scroll-reveal-ready { opacity:0; transform:translate3d(0,24px,0) scale(.985); }
+    .experience-step.scroll-reveal-ready.revealed { opacity:1; transform:translate3d(0,0,0) scale(1); transition:opacity .42s cubic-bezier(.2,.7,.2,1) var(--reveal-delay,0ms),transform .42s cubic-bezier(.2,.7,.2,1) var(--reveal-delay,0ms); }
+    @keyframes levelPop { 0% { filter:brightness(1.2); } 55% { filter:brightness(1.08); } 100% { filter:brightness(1); } }
+    @keyframes levelRing { 0% { opacity:.8; transform:scale(.88); } 100% { opacity:0; transform:scale(1.28); } }
+    .skills-tools { margin-top:38px; padding-top:24px; border-top:1px solid var(--line); }
+    .skills-tools-title { margin:0 0 20px; font:600 clamp(22px,2.6vw,30px)/1 "DM Sans",sans-serif; }
+    .skill-groups { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+    .skill-group-label { display:block; margin-bottom:10px; color:var(--blue); font:10px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.06em; }
+    .skill-tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .skill-tag { padding:7px 10px; border:1px solid var(--line); border-radius:999px; font-size:12px; line-height:1; }
+    .contact { background:var(--ink); color:var(--paper); border-top:0; }
+    .contact .wrap { padding-top:6px; }
+    .contact h2 { font-size:clamp(60px,10vw,145px); }
+    .contact a { display:inline-block; margin-top:32px; font:600 clamp(23px,3.7vw,50px)/1 "DM Sans",sans-serif; letter-spacing:-.02em; text-decoration:none; border-bottom:2px solid var(--pink); }
+    @media (hover:hover) and (pointer:fine) { .contact a:hover { color:var(--pink); } }
+    .contact .linkedin-link { margin-top:18px; font-size:clamp(18px,3.7vw,32px); letter-spacing:-.02em; }
+    .copy-email { display:inline-flex; align-items:center; margin:12px 0 0; padding:8px 12px; border:1px solid rgba(245,238,228,.5); border-radius:999px; background:transparent; color:var(--paper); font:500 10px "DM Mono",monospace; cursor:pointer; transition:background .2s ease,color .2s ease,border-color .2s ease; }
+    .copy-email:hover { background:var(--paper); color:var(--ink); border-color:var(--paper); }
+    .copy-email:focus-visible { outline:2px solid var(--pink); outline-offset:3px; }
+    .contact a { overflow-wrap:anywhere; }
+    footer { margin-top:28px; padding:20px 0 0; border-top:1px solid rgba(245,238,228,.2); font:11px "DM Mono",monospace; color:#b8aeb6; }
+    @keyframes float { 50% { transform:translateY(-7px) rotate(-8deg); } }
+    @keyframes cueNudge { 50% { transform:translateY(4px); } }
+    @keyframes modalIn { from { opacity:0; transform:translateY(8px) scale(.99); } to { opacity:1; transform:translateY(0) scale(1); } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+    @media (max-width:980px) { .work-grid.reels-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+    @media (max-width:760px) {
+      .wrap { padding:0 18px; }
+      .hero { grid-template-columns:minmax(0,1.1fr) minmax(120px,.9fr); gap:14px; min-height:66svh; padding:28px 0; align-items:center; }
+      .photo-space { width:100%; max-width:300px; aspect-ratio:4/4.8; min-height:0; margin:0; }
+      .photo-note { font-size:15px; left:10px; bottom:12px; max-width:calc(100% - 20px); padding:7px 24px 7px 9px; }
+      .photo-note em { font-size:19px; }
+      .photo-space:before { top:10px; left:10px; font-size:8px; }
+      .orbit { display:none; }
+      .section-head,.about { grid-template-columns:1fr; }
+      .section-head { gap:14px; margin-bottom:30px; }
+      .work-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+      .work-grid.reels-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+      .category-head { flex-wrap:wrap; }
+      .category-head p { width:100%; margin:0; }
+      .experience-step:nth-of-type(odd),.experience-step:nth-of-type(even) { --level-shift:0px; }
+      .experience-step:nth-of-type(odd) .experience-index,.experience-step:nth-of-type(even) .experience-index { transform:rotate(0); }
+      .experience-step.is-current .experience-index { transform:scale(1.08) rotate(-5deg); }
+      .experience-route-base { stroke-width:6; stroke-dasharray:1 10; }
+      .experience-step { grid-template-columns:42px minmax(0,1fr); gap:12px; padding:14px 0; }
+      .experience-index { grid-column:1; width:38px; height:38px; }
+      .experience-step:nth-of-type(odd) .experience-copy,.experience-step:nth-of-type(even) .experience-copy { grid-column:2; }
+      .experience-step:first-of-type { padding-top:14px; }
+      .experience-step:first-of-type .experience-copy { grid-column:2; grid-row:1; margin:0; padding:18px; display:block; }
+      .experience-step:first-of-type .experience-photos { display:flex; width:auto; margin-top:16px; }
+      .experience-copy { padding:18px; }
+      .experience-step:nth-of-type(2) .experience-copy { padding:18px; }
+      .skill-groups { gap:20px; }
+      .about-card { min-height:280px; }
+      .nav > span { display:none; }
+      .nav { gap:10px; }
+      .nav-links { gap:12px; }
+      section { padding:76px 0; }
+    }
+    @media (max-width:560px) {
+      .experience-step { grid-template-columns:38px minmax(0,1fr); gap:9px; padding:11px 0; }
+      .experience-index { width:34px; height:34px; font-size:9px; }
+      .experience-copy { padding:15px; }
+      .experience-step:nth-of-type(2) .experience-copy { padding:15px; }
+      .experience h3 { font-size:clamp(19px,5.8vw,25px); }
+      .experience-photo-stack { width:140px; height:124px; }
+      .experience-photo-stack img { width:68px; height:92px; left:calc(50% - 34px); }
+      .experience-photo-viewer { grid-template-columns:32px minmax(0,1fr) 32px; gap:6px; }
+      .experience-photo-nav { width:32px; height:32px; font-size:18px; }
+      .experience-photo-viewer > img { height:62vh; }
+      .skill-groups { grid-template-columns:1fr; }
+    }
+    @media (max-width:480px) {
+      .wrap { padding:0 16px; }
+      .nav { padding:17px 0; font-size:10px; }
+      .nav a { font-size:10px; }
+      .nav-links { gap:9px; }
+      .hero-role { margin:-10px 0 12px; font-size:9px; }
+      .hero-proof { position:absolute; left:0; right:0; bottom:20px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin:0; padding-top:9px; border-top:1px solid var(--line); font-size:8px; }
+      .hero-proof span { display:flex; flex-direction:column; align-items:flex-start; gap:2px; }
+      .hero-proof strong { font-size:11px; }
+      .hero-proof span + span:before { display:none; }
+      .hero { grid-template-columns:minmax(0,1.12fr) minmax(112px,.88fr); gap:12px; min-height:58svh; padding:22px 0 86px; }
+      .hero > div:first-child { position:static; }
+      .scroll-cue { left:0; bottom:61px; transform:none; font-size:8px; gap:5px; }
+      h1 { font-size:clamp(37px,10.5vw,50px); line-height:.95; margin:16px 0 18px; word-spacing:0; }
+      .eyebrow { font-size:9px; }
+      .intro { font-size:clamp(14px,4vw,17px); line-height:1.28; letter-spacing:-.02em; }
+      .hero-actions { gap:7px; margin-top:20px; }
+      .button { padding:9px 10px; font-size:9px; gap:5px; }
+      .photo-space { max-width:none; aspect-ratio:4/5.8; align-self:start; margin-top:6px; }
+      .photo-note { font-size:13px; left:8px; bottom:9px; max-width:calc(100% - 16px); padding:6px 21px 6px 8px; }
+      .photo-note em { font-size:17px; }
+      .photo-space:after { right:9px; bottom:7px; font-size:38px; }
+      .orbit { display:grid; left:auto; right:18px; bottom:76px; width:68px; height:68px; background:var(--pink); color:var(--ink); font-size:9px; animation-duration:6s; }
+      section { padding:62px 0; }
+      h2 { font-size:clamp(36px,10vw,48px); line-height:.98; }
+      .section-copy { font-size:16px; }
+      .about-card { min-height:240px; padding:24px; }
+      .growth-proof { margin:0 0 28px; }
+      .growth-proof-head { align-items:flex-start; flex-direction:column; gap:6px; }
+      .growth-stats { grid-template-columns:1fr; }
+      .growth-stat,.growth-stat + .growth-stat { padding:11px 0; border-left:0; border-top:1px solid var(--line); }
+      .growth-stat strong { min-width:82px; font-size:38px; }
+      .skill-groups { grid-template-columns:1fr; gap:18px; }
+      .skills-tools { margin-top:30px; }
+      .mini-list .service-card { min-height:92px; padding:15px; font-size:14px; }
+      .mini-list { grid-template-columns:1fr; }
+      .brands { gap:8px; }
+      .brand { padding:7px 12px 7px 9px; gap:7px; font-size:14px; }
+      .brand img { width:24px; height:24px; }
+      .brand img.wordmark { width:78px; height:28px; }
+      .work-tabs { gap:7px; }
+      .work-tabs button { flex:1; justify-content:center; padding:9px 10px; font-size:10px; }
+      .reel-category-tabs button { flex:1; justify-content:center; padding:7px 9px; font-size:10px; }
+      .work-category { margin-top:34px; }
+      .reel-subsection-head { gap:8px; }
+      .reel-count { padding:6px 8px; font-size:9px; }
+      .reel-doodle { width:32px; height:32px; font-size:17px; }
+      .work-grid { gap:10px; }
+      .work-grid.reels-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 9px; }
+      .work-label { font-size:14px; line-height:1.2; }
+      .work-meta { gap:5px; font-size:9px; }
+      .reel-stamp { top:6px; left:6px; padding:5px 6px; font-size:8px; }
+      .work-play { width:42px; height:42px; }
+      .experience-step { grid-template-columns:32px minmax(0,1fr); gap:8px; }
+      .experience-index { width:28px; height:28px; font-size:8px; }
+      .experience-copy { padding:13px; }
+      .experience-step:nth-of-type(2) .experience-copy { padding:13px; }
+      .experience-flow span { font-size:9px; }
+      .experience-proof div { padding-top:9px; padding-bottom:9px; }
+      .experience-proof div + div { padding-left:8px; }
+      .experience-proof strong { font-size:22px; }
+      .experience-proof span { font-size:8px; }
+      .experience h3 { font-size:17px; line-height:1.12; }
+      .experience-photo-stack { width:128px; height:114px; }
+      .experience-photo-stack img { width:60px; height:82px; left:calc(50% - 30px); }
+      .experience-photo-viewer { grid-template-columns:28px minmax(0,1fr) 28px; gap:4px; }
+      .experience-photo-nav { width:28px; height:28px; font-size:16px; }
+      .experience-photo-viewer > img { height:58vh; }
+      .contact h2 { font-size:clamp(48px,14vw,72px); }
+      .contact a { font-size:clamp(18px,5vw,26px); line-height:1.15; overflow-wrap:anywhere; }
+      .contact a[style] { font-size:18px !important; }
+      .copy-email { margin-top:9px; }
+      dialog.video-modal { width:calc(100vw - 20px); max-height:calc(100svh - 20px); padding:10px; overflow:auto; }
+      dialog.experience-photo-modal { width:calc(100vw - 20px); padding:10px; }
+      dialog.video-modal.is-reel { width:calc(100vw - 20px); }
+      .video-modal.is-reel .modal-frame { width:min(100%,360px); height:min(62svh,calc((100vw - 64px)*1.777)); }
+      .modal-footer { align-items:flex-start; font-size:9px; gap:8px; }
+      .modal-close { width:32px; height:32px; flex:none; }
+    }
+    @media (max-width:380px) {
+      main.wrap { background-image:radial-gradient(rgba(36,27,34,.12) .75px,transparent .85px); background-size:21px 21px; }
+      .experience-step:first-of-type h3 { font-size:28px; }
+      .experience-step:first-of-type .experience-summary { font-size:16px; }
+      .experience-highlight { padding:6px 8px; font-size:10px; }
+      .experience-brands { font-size:11px; }
+    }
+    @media (hover:hover) {
+      .experience-step .experience-index:hover { transform:translateX(var(--level-shift,0)) scale(1.18) rotate(4deg) !important; box-shadow:0 0 0 6px rgba(122,49,92,.14),0 0 24px rgba(239,162,132,.72); filter:brightness(1.06); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header"><nav class="nav wrap" aria-label="Main navigation"><strong><a href="#top" aria-label="Ishmeet Kaur, home">IK / 2026</a></strong><span>Social Media · Creator Marketing · On-Camera</span><div class="nav-links"><a href="https://linkedin.com/in/ishmeetkaur260" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#contact">Say Hello ↗</a></div></nav></header>
+  <main class="wrap">
+    <section class="hero" id="top">
+      <div>
+        <div class="eyebrow">Social Media &amp; Creator Marketing</div>
+        <h1>Ishmeet <span>Kaur.</span></h1>
+        <p class="hero-role">Social Media Executive · Creator Marketing · On-Camera Storytelling</p>
+        <p class="intro">I build social worlds, give brands a human voice, and bring ideas from brief to screen.</p>
+        <div class="hero-actions"><a class="button" href="#work">See Selected Work ↓</a><a class="button" href="#contact">Contact Me</a></div>
+        <div class="hero-proof" aria-label="Selected results"><span><strong>400+</strong> creators</span><span><strong>20+</strong> campaigns</span><span><strong>+39K</strong> followers</span></div>
+      </div>
+      <div class="photo-space" aria-label="Portrait of Ishmeet Kaur"><img src="./ishmeet-portrait.webp" alt="Ishmeet Kaur" width="1142" height="1377" fetchpriority="high"><div class="photo-note">Stories on screen<em>and strategy behind them.</em></div></div>
+      <div class="orbit">Ideas<br>in Motion</div>
+      <a class="scroll-cue" href="#about">Scroll to explore <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section id="about">
+      <div class="section-head"><div class="kicker">01 / About</div><div><h2>Not just posting.<br>Making people pause.</h2><p class="section-copy">I bring social campaigns from brief to post—combining content planning, creator coordination, short-form production and on-camera storytelling.</p></div></div>
+      <div class="growth-proof" aria-label="Girlyveda Instagram growth, March to November 2026">
+        <div class="growth-proof-head"><h3>Growth backed by execution.</h3><span>Girlyveda · Instagram</span></div>
+        <div class="growth-stats"><div class="growth-stat"><strong data-count="89" data-suffix="K">89K</strong><span>Girlyveda followers</span></div><div class="growth-stat"><strong data-count="39" data-prefix="+" data-suffix="K">+39K</strong><span>Followers gained</span></div><div class="growth-stat"><strong data-count="78" data-suffix="%">78%</strong><span>Audience growth</span></div></div>
+        <p class="execution-proof">Across campaigns · 400+ creators onboarded · 20+ campaigns led</p>
+        <p class="growth-period">Instagram growth · March–November 2026</p>
+      </div>
+      <div class="about">
+        <div class="about-card"><p>Ideas with a pulse. Strategy with <span class="scribble">taste.</span> Content people do not simply swipe past.</p><p class="about-card-note">From content calendars and creator campaigns to scripts, shoots and publishing, I can support the full social content cycle.</p><div class="kicker">Based in India · Working everywhere</div></div>
+        <div class="service-panel"><div class="service-panel-head"><span class="kicker">What I can bring to a team</span><h3>Ways I can help</h3></div><div class="mini-list">
+          <div class="service-card"><span class="service-label"><svg class="service-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m2 12 3.5-4 3 2 5-6M10.5 4H14v3.5"/></svg>01 / Social media</span><strong>Trend &amp; audience research, content planning, publishing &amp; community management</strong></div>
+          <div class="service-card"><span class="service-label"><svg class="service-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="5.3" cy="5" r="2.2"/><circle cx="11.2" cy="5.7" r="1.7"/><path d="M1.7 13c.2-2.1 1.5-3.2 3.7-3.2S9 10.9 9.2 13m.1-2.8c2.7-.6 4.5.3 4.9 2.8"/></svg>02 / Creator campaigns</span><strong>Creator research, outreach, onboarding &amp; coordination</strong></div>
+          <div class="service-card"><span class="service-label"><svg class="service-icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="4" width="8.5" height="8" rx="1.2"/><path d="m10.5 6.5 3.5-2v7l-3.5-2M4.5 2.5l1 1.5m3-1.5 1 1.5"/></svg>03 / Short-form content &amp; ads</span><strong>Reel and ad concepts, scripts, in-house shoot support &amp; edit coordination</strong></div>
+          <div class="service-card"><span class="service-label"><svg class="service-icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.2" y="2" width="5.6" height="8.5" rx="2.8"/><path d="M3.3 7.4a4.7 4.7 0 0 0 9.4 0M8 12.1V15m-2.5 0h5"/></svg>04 / On-camera</span><strong>Presenting, anchoring &amp; appearing in brand videos</strong></div>
+        </div></div>
+      </div>
+    </section>
+
+
+
+    <section id="experience">
+      <div class="section-head"><div class="kicker">02 / The journey</div><div><h2>Every chapter<br><span class="journey-script">moves you forward.</span></h2><p class="section-copy">A path from live event floors to creator campaigns and social-first storytelling.</p><span class="journey-note">keep going, it gets good</span></div></div>
+      <div class="experience" aria-label="Career journey">
+        <svg class="experience-route" aria-hidden="true" preserveAspectRatio="none"><path class="experience-route-base"></path><path class="experience-route-progress"></path></svg>
+        <article class="experience-step" data-journey-step>
+          <button class="experience-index" type="button" aria-pressed="false" aria-label="Go to level 1: Freelance Event Coordinator"><svg class="experience-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 9.8 6l4.7 2-4.7 1.8L8 14.5 6.2 9.8 1.5 8l4.7-2L8 1.5Z" stroke="currentColor" stroke-width="1.2"/></svg>01</button>
+          <div class="experience-copy"><div class="experience-meta"><time>JUN ’24 — OCT ’25</time><span class="experience-mark"><span class="skill-tag">LIVE EVENTS</span></span></div><h3>Freelance Event Coordinator</h3>
+            <p class="experience-summary">Live event operations, guest experience and brand activations for exhibitions, trade shows and award ceremonies.</p>
+            <div class="experience-highlight-label">What I brought to the floor</div><div class="experience-highlights"><span class="experience-highlight">Event operations</span><span class="experience-highlight">VIP &amp; guest experience</span><span class="experience-highlight">Backstage &amp; stage coordination</span><span class="experience-highlight">Brand activations</span></div>
+            <div class="experience-brands"><span class="experience-highlight-label">Brands in the room</span><br>ABP Auto · DP World</div>
+            <div class="experience-photos-label">A few field notes ↓</div>
+            <div class="experience-photos"><button class="experience-photo-stack" type="button" aria-label="Open all four event photos"><img src="./assets/experience/event-helpdesk.webp" alt="At an event help desk" loading="lazy"><img src="./assets/experience/event-venue.webp" alt="At an event venue" loading="lazy"><img src="./assets/experience/event-coordination.webp" alt="On-site event coordination" loading="lazy"><img src="./assets/experience/event-conference.webp" alt="At a conference venue" loading="lazy"></button></div>
+          </div>
+        </article>
+        <article class="experience-step" data-journey-step>
+          <button class="experience-index" type="button" aria-pressed="false" aria-label="Go to level 2: Brand Solutions Intern at Snack Media"><svg class="experience-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="5.2" cy="5" r="2.4" stroke="currentColor" stroke-width="1.2"/><circle cx="11.2" cy="6" r="1.8" stroke="currentColor" stroke-width="1.2"/><path d="M1.7 13c.3-2.2 1.6-3.3 3.8-3.3s3.5 1.1 3.8 3.3M9.4 10.2c2.8-.7 4.5.3 4.9 2.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>02</button>
+          <div class="experience-copy"><div class="experience-meta"><time>NOV ’25 — JAN ’26</time><span class="experience-mark"><img class="experience-logo" src="./assets/brands/snackmedia-logo.svg" alt="Snack Media logo" loading="lazy"></span></div><h3>Brand Solutions Intern · Snack Media</h3>
+            <p class="experience-summary">Supported 20+ brand campaigns from creator discovery to delivery—matching talent, coordinating outreach, monitoring content quality and appearing in social media videos.</p>
+            <div class="experience-highlight-label">From first search to final post</div><div class="experience-flow"><span>Find creators</span><span>Coordinate campaigns</span><span>Monitor content</span><span>Deliver &amp; report</span></div>
+            <div class="experience-highlight-label">The work behind the campaigns</div><div class="experience-highlights"><span class="experience-highlight">Influencer research &amp; outreach</span><span class="experience-highlight">Creator management</span><span class="experience-highlight">Campaign briefs</span><span class="experience-highlight">Content checks</span><span class="experience-highlight">On-camera social videos</span></div>
+            <div class="experience-highlight-label">Campaign brands</div><p class="experience-campaign-note">L’Oréal · NIVEA · Paytm · Nykaa · CeraVe · Himalaya · SUGAR · Fiama · The Wellness Shop · Rivona · Bla Bli Blu</p>
+          </div>
+        </article>
+        <article class="experience-step" data-journey-step>
+          <button class="experience-index" type="button" aria-pressed="false" aria-label="Go to level 3: Social Media Executive at Sheopal’s"><svg class="experience-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5v4M8 10.5v4M1.5 8h4m5 0h4M3.4 3.4l2.8 2.8m3.6 3.6 2.8 2.8m0-9.2-2.8 2.8m-3.6 3.6-2.8 2.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>03</button>
+          <div class="experience-copy"><div class="experience-meta"><time>MAR — NOV ’26</time><span class="experience-mark"><img class="experience-logo wordmark" src="./assets/brands/sheopals-logo.png" alt="Sheopal’s logo" loading="lazy"></span></div><h3>Social Media Executive · Sheopal’s</h3>
+            <p class="experience-summary">Managed social content and page growth for Sheopal’s and Girlyveda, onboarded 400+ creators for brand collaborations, and wrote ad copy and scripts that supported sales growth. Also joined in-house shoots, appearing in and anchoring brand videos.</p>
+            <div class="experience-highlight-label">Girlyveda results · March–November 2026</div><div class="experience-proof" aria-label="Selected results"><div><strong>400+</strong><span>Creators onboarded</span></div><div><strong>+39K</strong><span>Followers gained</span></div><div><strong>78%</strong><span>Audience growth</span></div></div>
+            <div class="experience-highlight-label">The work, on and off camera</div><div class="experience-highlights"><span class="experience-highlight">Social planning &amp; publishing</span><span class="experience-highlight">Page growth &amp; engagement</span><span class="experience-highlight">Creator collaborations</span><span class="experience-highlight">Ad copy &amp; scripts</span><span class="experience-highlight">Sales-supporting campaigns</span><span class="experience-highlight">In-house shoots</span><span class="experience-highlight">On-camera talent &amp; anchoring</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="skills-tools">
+        <h3 class="skills-tools-title">Skills &amp; Tools</h3>
+        <div class="skill-groups">
+          <div class="skill-group"><span class="skill-group-label">Core skills</span><div class="skill-tags"><span class="skill-tag">Social Media Management</span><span class="skill-tag">Influencer Marketing</span><span class="skill-tag">Creator Outreach</span><span class="skill-tag">Campaign Management</span><span class="skill-tag">Content Strategy</span><span class="skill-tag">Scriptwriting</span><span class="skill-tag">Content Creation</span><span class="skill-tag">On-Camera Presentation</span><span class="skill-tag">Market Research</span><span class="skill-tag">Social Media Analytics</span></div></div>
+          <div class="skill-group"><span class="skill-group-label">Tools</span><div class="skill-tags"><span class="skill-tag">Canva</span><span class="skill-tag">Meta Business Suite</span><span class="skill-tag">Instagram Insights</span><span class="skill-tag">Excel</span><span class="skill-tag">Google Sheets</span></div></div>
+        </div>
+      </div>
+    </section>
+    <dialog class="experience-photo-modal" id="experience-photo-modal" aria-label="Event photographs"><button class="experience-photo-close" type="button" aria-label="Close photographs">×</button><div class="experience-photo-viewer"><button class="experience-photo-nav" type="button" data-photo-prev aria-label="Previous photo">‹</button><img alt=""><button class="experience-photo-nav" type="button" data-photo-next aria-label="Next photo">›</button></div><div class="experience-photo-count" aria-live="polite"></div></dialog>    <section id="work">
+      <!-- TODO: Add each project's brief, Ishmeet's role, and result when those details are confirmed. -->
+      <div class="section-head"><div class="kicker">03 / Selected work</div><div><h2>Good work.<br>In motion.</h2><p class="section-copy work-intro">Campaigns, lifestyle and conversations—collected in two little windows. <span id="work-platform-hint">Tap a frame to open it on Instagram.</span></p></div></div>
+      <div class="work-tabs" role="tablist" aria-label="Choose work format">
+<button id="reels-tab" type="button" role="tab" aria-selected="true" aria-controls="reel-work" tabindex="0"><svg class="platform-icon instagram-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="1.25" fill="currentColor"/></svg> Instagram Reels <span>12</span></button>
+<button id="youtube-tab" type="button" role="tab" aria-selected="false" aria-controls="youtube-work" tabindex="-1"><svg class="platform-icon youtube-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8Z"/><path class="youtube-mark-play" d="m9.6 15.4 6.2-3.4-6.2-3.4v6.8Z"/></svg> YouTube <span>05</span></button>
+      </div>
+
+      <div class="work-category work-tabpanel" id="reel-work" role="tabpanel" aria-labelledby="reels-tab">
+        <div class="category-head"><span class="category-number">01 /</span><h3>Instagram Reels</h3><p>Choose a mood ↓</p></div>
+        <div class="reel-category-tabs" role="tablist" aria-label="Choose Instagram reel category">
+          <button id="brand-promotion-tab" data-category="brand" type="button" role="tab" aria-selected="true" aria-controls="brand-promotion-reels" tabindex="0"><svg class="category-tab-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.8 6h3l7-3v10l-7-3h-3zM4.8 10l1.4 4h3l-1.8-4M13 5.4l1.5-1M13 9.6l1.5 1"/></svg>Brand Promotion <span>06</span></button>
+          <button id="lifestyle-content-tab" data-category="lifestyle" type="button" role="tab" aria-selected="false" aria-controls="lifestyle-reels" tabindex="-1"><svg class="category-tab-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3.1"/><path d="M8 1.3v1.5m0 10.4v1.5M1.3 8h1.5m10.4 0h1.5M3.25 3.25l1.1 1.1m7.3 7.3 1.1 1.1m0-9.5-1.1 1.1m-7.3 7.3-1.1 1.1"/></svg>Lifestyle Content <span>06</span></button>
+        </div>
+        <div class="reel-subsection reel-category-panel" id="brand-promotion-reels" role="tabpanel" aria-labelledby="brand-promotion-tab">
+  <div class="reel-subsection-head"><div class="reel-heading-lockup"><span class="reel-doodle" aria-hidden="true">✦</span><div><span class="reel-kicker">01 / The ad spots</span><h4>Brand promotion</h4></div></div><span class="reel-count">6 Little Films</span></div>
+  <div class="work-grid reels-grid">
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="brand" data-path="reel" data-id="DaDK3CjoxwM" data-url="https://www.instagram.com/reel/DaDK3CjoxwM/" data-thumb="./assets/instagram-thumbnails/DaDK3CjoxwM.webp" data-label="From brief to feed"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Ad</span><span>01</span></span><span class="work-label">From brief to feed</span></button>
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="brand" data-path="reel" data-id="Dc0zx6WANxi" data-url="https://www.instagram.com/reel/Dc0zx6WANxi/" data-thumb="./assets/instagram-thumbnails/Dc0zx6WANxi.webp" data-label="Product spotlight"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Ad</span><span>02</span></span><span class="work-label">Product spotlight</span></button>
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="brand" data-path="reel" data-id="DdETNSEjQIQ" data-url="https://www.instagram.com/reel/DdETNSEjQIQ/" data-thumb="./assets/instagram-thumbnails/DdETNSEjQIQ.webp" data-label="Made to feel like you"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Ad</span><span>03</span></span><span class="work-label">Made to feel like you</span></button>
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="brand" data-path="p" data-id="DdQ0focFEYo" data-url="https://www.instagram.com/p/DdQ0focFEYo/" data-thumb="./assets/instagram-thumbnails/DdQ0focFEYo.webp" data-label="A little more real life"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Ad</span><span>04</span></span><span class="work-label">A little more real life</span></button>
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="brand" data-path="reels" data-id="DdbO5yyDBai" data-url="https://www.instagram.com/reels/DdbO5yyDBai/" data-thumb="./assets/instagram-thumbnails/DdbO5yyDBai.webp" data-label="Everyday brand ad"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Ad</span><span>05</span></span><span class="work-label">Everyday brand ad</span></button>
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="brand" data-path="reel" data-id="DfW1D2wTWYO" data-url="https://www.instagram.com/reel/DfW1D2wTWYO/" data-thumb="./assets/instagram-thumbnails/DfW1D2wTWYO.webp" data-label="Brand promotion"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Ad</span><span>06</span></span><span class="work-label">Brand promotion</span></button>
+  </div>
+</div>
+<div class="reel-subsection reel-category-panel" id="lifestyle-reels" role="tabpanel" aria-labelledby="lifestyle-content-tab" hidden>
+  <div class="reel-subsection-head"><div class="reel-heading-lockup"><span class="reel-doodle" aria-hidden="true">☼</span><div><span class="reel-kicker">02 / The everyday</span><h4>Lifestyle</h4></div></div><span class="reel-count">6 Life Notes</span></div>
+  <div class="work-grid reels-grid">
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="lifestyle" data-path="reels" data-id="DeqB0p1um3S" data-url="https://www.instagram.com/reel/DeqB0p1um3S/" data-thumb="./assets/instagram-thumbnails/DeqB0p1um3S-lifestyle.webp" data-label="Beauty with a point of view"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Lifestyle</span><span>01</span></span><span class="work-label">Beauty with a point of view</span></button>
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="lifestyle" data-path="reels" data-id="DW1Ii7XEtGv" data-url="https://www.instagram.com/reel/DW1Ii7XEtGv/" data-thumb="./assets/instagram-thumbnails/DeqB0p1um3S.webp" data-label="Made to stop the scroll"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Lifestyle</span><span>02</span></span><span class="work-label">Made to stop the scroll</span></button>
+<!-- TODO: Add brand + result for this reel. -->
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="lifestyle" data-path="reels" data-id="DZ7ZNtav_N6" data-url="https://www.instagram.com/reels/DZ7ZNtav_N6/" data-thumb="./assets/instagram-thumbnails/DW1Ii7XEtGv.webp" data-label="Lifestyle reel"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Lifestyle</span><span>03</span></span><span class="work-label">Lifestyle reel</span></button>
+<!-- TODO: Add brand + result for this reel. -->
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="lifestyle" data-path="reels" data-id="DW6RpZ1vSTK" data-url="https://www.instagram.com/reels/DW6RpZ1vSTK/" data-thumb="./assets/instagram-thumbnails/DW6RpZ1vSTK.webp" data-label="Lifestyle reel"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Lifestyle</span><span>04</span></span><span class="work-label">Lifestyle reel</span></button>
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="lifestyle" data-path="reels" data-id="DYzUJE5v04S" data-url="https://www.instagram.com/reel/DYzUJE5v04S/" data-thumb="./assets/instagram-thumbnails/DYzUJE5v04S.webp" data-label="A better kind of wellness"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Lifestyle</span><span>05</span></span><span class="work-label">A better kind of wellness</span></button>
+<button class="work-card" type="button" data-kind="instagram" data-reel-category="lifestyle" data-path="reels" data-id="DV55uktj6f7" data-url="https://www.instagram.com/reel/DV55uktj6f7/" data-thumb="./assets/instagram-thumbnails/DV55uktj6f7.webp" data-label="On-camera moment"><span class="work-thumb" data-thumbnail="manual"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Lifestyle</span><span>06</span></span><span class="work-label">On-camera moment</span></button>
+  </div>
+</div>
+      </div>
+
+<div class="work-category work-tabpanel" id="youtube-work" role="tabpanel" aria-labelledby="youtube-tab" hidden>
+        <div class="category-head"><span class="category-number">02 /</span><h3>YouTube</h3><p>films · lifestyle · podcast</p></div>
+        <div class="work-grid youtube-grid">
+          <button class="work-card" type="button" data-kind="youtube" data-id="RIFmZyWqlps" data-start="168" data-url="https://www.youtube.com/watch?v=RIFmZyWqlps&amp;t=168s" data-label="Podcast"><span class="work-thumb" data-thumbnail="youtube"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>In conversation</span><span>01</span></span><span class="work-label">Podcast</span></button>
+          <button class="work-card" type="button" data-kind="youtube" data-id="blSUuCYAb60" data-url="https://www.youtube.com/watch?v=blSUuCYAb60" data-label="Lifestyle film"><span class="work-thumb" data-thumbnail="youtube"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Lifestyle</span><span>02</span></span><span class="work-label">Lifestyle film</span></button>
+          <!-- TODO: Add Ishmeet's specific role and result for this Girlyveda video. -->
+          <button class="work-card" type="button" data-kind="youtube" data-id="qpfOZPLVpa0" data-url="https://www.youtube.com/watch?v=qpfOZPLVpa0" data-label="Girlyveda · Ayurveda &amp; fatigue"><span class="work-thumb" data-thumbnail="youtube"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>YouTube</span><span>03</span></span><span class="work-label">Girlyveda · Ayurveda &amp; fatigue</span></button>
+          <!-- TODO: Add Ishmeet's specific role and result for this Girlyveda video. -->
+          <button class="work-card" type="button" data-kind="youtube" data-id="pLskps9KCzg" data-url="https://www.youtube.com/watch?v=pLskps9KCzg" data-label="Girlyveda · Chin acne"><span class="work-thumb" data-thumbnail="youtube"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>YouTube</span><span>04</span></span><span class="work-label">Girlyveda · Chin acne</span></button>
+          <button class="work-card" type="button" data-kind="youtube" data-id="KaktyJK6JrM" data-url="https://www.youtube.com/watch?v=KaktyJK6JrM" data-label="Promotional film"><span class="work-thumb" data-thumbnail="youtube"><span class="work-play" aria-hidden="true">▶</span></span><span class="work-meta"><span>Ad</span><span>05</span></span><span class="work-label">Promotional film</span></button>
+        </div>
+      </div>
+    </section>
+
+<section id="brands">
+      <div class="section-head"><div class="kicker">04 / Worked with</div><div><h2>Brands, but make it a relationship.</h2><p class="section-copy">Direct social work for Girlyveda and Sheopal’s, plus creator campaigns coordinated through Snack Media for the names below.</p></div></div>
+      <div class="brands" aria-label="Brands worked with, ordered from most widely recognized to more niche">
+        <span class="brand"><img class="wordmark" src="./assets/brands/loreal-logo.svg" alt="L’Oréal logo" loading="lazy"></span>
+        <span class="brand"><img src="./assets/brands/nivea-logo.svg" alt="NIVEA logo" loading="lazy"></span>
+        <span class="brand"><img class="wordmark" src="./assets/brands/paytm-logo.svg" alt="Paytm logo" loading="lazy"></span>
+        <span class="brand"><img class="wordmark" src="./assets/brands/nykaa-logo.svg" alt="Nykaa logo" loading="lazy"></span>
+        <span class="brand"><img class="wordmark" src="./assets/brands/cerave-logo.svg" alt="CeraVe logo" loading="lazy"></span>
+        <span class="brand"><img class="wordmark" src="./assets/brands/himalaya-logo.png" alt="Himalaya logo" loading="lazy"></span>
+        <span class="brand"><img class="wordmark" src="./assets/brands/sugar-logo.png" alt="SUGAR logo" loading="lazy"></span>
+        <span class="brand"><img class="wordmark" src="./assets/brands/fiama-logo.jpg" alt="Fiama logo" loading="lazy"></span>
+        <span class="brand"><img src="./assets/brands/girlyveda-logo.webp" alt="Girlyveda logo" loading="lazy">Girlyveda</span>
+        <span class="brand"><img class="wordmark" src="./assets/brands/sheopals-logo.png" alt="Sheopal’s logo" loading="lazy"></span>
+        <span class="brand"><img src="./assets/brands/snackmedia-logo.svg" alt="Snack Media logo" loading="lazy">Snack Media</span>
+        <span class="brand"><img src="./assets/brands/wellness-shop-logo.webp" alt="The Wellness Shop logo" loading="lazy">The Wellness Shop</span>
+        <span class="brand"><img class="wordmark" src="./assets/brands/rivona-logo.jpg" alt="Rivona Naturals logo" loading="lazy"></span>
+        <span class="brand">Bla Bli Blu</span>
+      </div>
+    </section>
+
+
+  </main>
+  <section class="contact" id="contact"><div class="wrap"><div class="kicker">05 / Let’s make something people feel</div><h2>Have a good<br>brief?</h2><a href="mailto:ishmeetkaur260@gmail.com">ishmeetkaur260@gmail.com ↗</a><br><button class="copy-email" id="copy-email" type="button" aria-live="polite">Copy email</button><br><a style="font-size:21px; margin-top:18px; letter-spacing:-.03em" href="tel:+918076208720">+91 80762 08720</a><br><a class="linkedin-link" href="https://linkedin.com/in/ishmeetkaur260" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><footer>© Ishmeet Kaur · Social made with feeling</footer></div></section>
+  <dialog class="video-modal" id="video-modal" aria-label="Selected work video">
+    <div class="modal-top"><span id="modal-title">Selected work</span><button class="modal-close" type="button" aria-label="Close video">×</button></div>
+    <iframe class="modal-frame" id="modal-frame" title="Selected work video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    <div class="modal-footer"><span>Having trouble playing? Open the original video.</span><a id="modal-original" href="#" target="_blank" rel="noopener">Open original ↗</a></div>
+  </dialog>
+  <script>
+    const copyEmailButton = document.getElementById("copy-email");
+    copyEmailButton?.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("ishmeetkaur260@gmail.com");
+        copyEmailButton.textContent = "Copied ✓";
+        window.setTimeout(() => { copyEmailButton.textContent = "Copy email"; }, 1800);
+      } catch {
+        copyEmailButton.textContent = "Copy unavailable";
+        window.setTimeout(() => { copyEmailButton.textContent = "Copy email"; }, 1800);
+      }
+    });
+    const workTabs = Array.from(document.querySelectorAll('.work-tabs [role="tab"]'));
+    const workPanels = workTabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls')));
+    const tabAnimationTimers = new WeakMap();
+    function animateTabPanel(panel) {
+      if (!panel || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const previousTimer = tabAnimationTimers.get(panel);
+      if (previousTimer) window.clearTimeout(previousTimer);
+      panel.classList.remove('tab-content-entering');
+      void panel.offsetWidth;
+      panel.classList.add('tab-content-entering');
+      tabAnimationTimers.set(panel, window.setTimeout(() => {
+        panel.classList.remove('tab-content-entering');
+        tabAnimationTimers.delete(panel);
+      }, 620));
+    }
+    function activateWorkTab(activeTab, moveFocus = false) {
+      let activePanel = null;
+      workTabs.forEach((tab, index) => {
+        const active = tab === activeTab;
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+        workPanels[index].hidden = !active;
+        if (active) activePanel = workPanels[index];
+      });
+      animateTabPanel(activePanel);
+      const workHint = document.getElementById("work-platform-hint");
+      if (workHint) workHint.textContent = activeTab.id === "youtube-tab" ? "Tap a frame to open it on YouTube." : "Tap a frame to open it on Instagram.";
+      if (moveFocus) activeTab.focus();
+    }
+    workTabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateWorkTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft' || event.key === 'Home' || event.key === 'End') {
+          event.preventDefault();
+          const next = event.key === 'Home' ? 0 : event.key === 'End' ? workTabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : workTabs.length - 1)) % workTabs.length;
+          activateWorkTab(workTabs[next], true);
+        }
+      });
+    });
+
+    const reelCategoryTabs = Array.from(document.querySelectorAll('.reel-category-tabs [role="tab"]'));
+    const reelCategoryPanels = reelCategoryTabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls')));
+    function activateReelCategoryTab(activeTab, moveFocus = false) {
+      let activePanel = null;
+      reelCategoryTabs.forEach((tab, index) => {
+        const active = tab === activeTab;
+        tab.setAttribute('aria-selected', String(active));
+        tab.tabIndex = active ? 0 : -1;
+        reelCategoryPanels[index].hidden = !active;
+        if (active) activePanel = reelCategoryPanels[index];
+      });
+      animateTabPanel(activePanel);
+      if (moveFocus) activeTab.focus();
+    }
+    reelCategoryTabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateReelCategoryTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft' || event.key === 'Home' || event.key === 'End') {
+          event.preventDefault();
+          const next = event.key === 'Home' ? 0 : event.key === 'End' ? reelCategoryTabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : reelCategoryTabs.length - 1)) % reelCategoryTabs.length;
+          activateReelCategoryTab(reelCategoryTabs[next], true);
+        }
+      });
+    });
+
+    document.querySelectorAll('.work-card').forEach((card) => {
+      const holder = card.querySelector('.work-thumb');
+      card.classList.toggle('is-reel', card.dataset.kind === 'instagram');
+      if (card.dataset.kind === 'instagram') {
+        const stamp = document.createElement('span');
+        stamp.className = 'reel-stamp';
+        stamp.textContent = card.dataset.reelCategory === 'brand' ? 'BRAND / PROMO' : 'LIFE / ON CAMERA';
+        holder.append(stamp);
+      }
+      const image = new Image();
+      image.alt = '';
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.addEventListener('error', () => {
+        if (card.dataset.kind === 'youtube' && image.dataset.fallback !== 'used') {
+          image.dataset.fallback = 'used';
+          image.src = `https://img.youtube.com/vi/${card.dataset.id}/hqdefault.jpg`;
+        } else {
+          image.remove();
+          holder.classList.add('is-fallback');
+        }
+      });
+      holder.prepend(image);
+      if (card.dataset.kind === 'youtube') {
+        image.src = `https://img.youtube.com/vi/${card.dataset.id}/maxresdefault.jpg`;
+      } else {
+        image.src = card.dataset.thumb;
+      }
+    });
+
+    const experiencePath = document.querySelector('.experience');
+    const routeSvg = document.querySelector('.experience-route');
+    const routeBase = document.querySelector('.experience-route-base');
+    const routeProgress = document.querySelector('.experience-route-progress');
+    const journeySteps = Array.from(document.querySelectorAll('[data-journey-step]'));
+    const updateJourneyRoute = () => {
+      if (!experiencePath || !routeSvg || !journeySteps.length) return;
+      const bounds = experiencePath.getBoundingClientRect();
+      routeSvg.setAttribute('viewBox', `0 0 ${bounds.width} ${bounds.height}`);
+      const points = journeySteps.map((step) => {
+        const marker = step.querySelector('.experience-index').getBoundingClientRect();
+        return { x: marker.left - bounds.left + marker.width / 2, y: marker.top - bounds.top + marker.height / 2 };
+      });
+      const pathData = points.reduce((path, point, index) => {
+        if (index === 0) return `M ${point.x} ${point.y}`;
+        const previous = points[index - 1];
+        const midY = (previous.y + point.y) / 2;
+        const bend = index % 2 ? 16 : -16;
+        return `${path} C ${previous.x + bend} ${midY - 28}, ${point.x + bend} ${midY + 28}, ${point.x} ${point.y}`;
+      }, '');
+      routeBase.setAttribute('d', pathData);
+      routeProgress.setAttribute('d', pathData);
+      const length = routeBase.getTotalLength();
+      routeProgress.style.strokeDasharray = `${length} ${length}`;
+      const previewIndex = journeySteps.findIndex((step) => step.classList.contains('is-preview'));
+      const activeIndex = previewIndex >= 0 ? previewIndex : Math.max(0, journeySteps.findIndex((step) => step.classList.contains('is-current')));
+      routeProgress.style.strokeDashoffset = `${length * (1 - activeIndex / Math.max(1, journeySteps.length - 1))}`;
+    };
+    updateJourneyRoute();
+    if ('ResizeObserver' in window && experiencePath) new ResizeObserver(updateJourneyRoute).observe(experiencePath);
+    window.addEventListener('resize', updateJourneyRoute, { passive:true });
+    const setCurrentJourneyStep = (current) => {
+      journeySteps.forEach((step) => {
+        const selected = step === current;
+        step.classList.toggle('is-current', selected);
+        step.querySelector('.experience-index').setAttribute('aria-pressed', String(selected));
+      });
+      updateJourneyRoute();
+    };
+    const updateActiveJourneyStep = () => {
+      if (!experiencePath || !journeySteps.length) return;
+      const focusY = window.innerHeight * .5;
+      const pathBounds = experiencePath.getBoundingClientRect();
+      if (pathBounds.top > focusY || pathBounds.bottom < focusY) return;
+      const current = journeySteps.reduce((nearest, step) => {
+        const marker = step.querySelector('.experience-index').getBoundingClientRect();
+        const distance = Math.abs(marker.top + marker.height / 2 - focusY);
+        return !nearest || distance < nearest.distance ? { step, distance } : nearest;
+      }, null)?.step;
+      if (current && !current.classList.contains('is-current')) setCurrentJourneyStep(current);
+    };
+    journeySteps.forEach((step) => {
+      const marker = step.querySelector('.experience-index');
+      const preview = () => {
+        journeySteps.forEach((item) => item.classList.toggle('is-preview', item === step));
+        updateJourneyRoute();
+      };
+      const clearPreview = () => {
+        journeySteps.forEach((item) => item.classList.remove('is-preview'));
+        updateJourneyRoute();
+        updateActiveJourneyStep();
+      };
+      marker.addEventListener('pointerenter', preview);
+      marker.addEventListener('pointerleave', clearPreview);
+      marker.addEventListener('focus', preview);
+      marker.addEventListener('blur', clearPreview);
+      marker.addEventListener('click', () => {
+        setCurrentJourneyStep(step);
+        step.scrollIntoView({ behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'center' });
+      });
+    });
+    let journeyScrollFrame = 0;
+    window.addEventListener('scroll', () => {
+      if (journeyScrollFrame) return;
+      journeyScrollFrame = requestAnimationFrame(() => {
+        journeyScrollFrame = 0;
+        updateActiveJourneyStep();
+      });
+    }, { passive:true });
+    window.addEventListener('resize', updateActiveJourneyStep, { passive:true });
+    updateActiveJourneyStep();
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            if (!entry.target.matches('.experience-step')) revealObserver.unobserve(entry.target);
+          } else if (entry.target.matches('.experience-step')) {
+            entry.target.classList.remove('revealed');
+          }
+        });
+      }, { threshold:0.08, rootMargin:'0px 0px -3% 0px' });
+      const revealTargets = Array.from(document.querySelectorAll(
+        '.section-head, .growth-proof, .about > *, .mini-list > .service-card, .category-head, .reel-subsection-head, .brand, .experience-step, .skills-tools, .contact .wrap, .work-card'
+      ));
+      revealTargets.forEach((target, index) => {
+        const isCard = target.matches('.work-card');
+        target.classList.add(isCard ? 'reveal-ready' : 'scroll-reveal-ready');
+        const revealDelay = target.matches('.experience-step') ? (index % 3) * 45 : target.matches('.service-card') ? (index % 4) * 55 : (index % 4) * 65;
+        target.style.setProperty('--reveal-delay', `${revealDelay}ms`);
+        revealObserver.observe(target);
+      });
+    }
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      const growthNumbers = Array.from(document.querySelectorAll('.growth-stat strong[data-count]'));
+      const prepareCounter = (element) => {
+        const target = Number(element.dataset.count);
+        const prefix = element.dataset.prefix || '';
+        const suffix = element.dataset.suffix || '';
+        const start = Math.max(0, target - 5);
+        const fromDigits = String(start);
+        const toDigits = String(target);
+        const odometer = document.createElement('span');
+        odometer.className = 'growth-odometer';
+        odometer.setAttribute('aria-hidden', 'true');
+        element.setAttribute('aria-label', `${prefix}${target}${suffix}`);
+        element.replaceChildren(document.createTextNode(prefix));
+
+        [...toDigits].forEach((digit, index) => {
+          const fromDigit = Number(fromDigits[index]);
+          const toDigit = Number(digit);
+          const startRow = 10 + fromDigit;
+          const turns = (toDigit - fromDigit + 10) % 10;
+          const digitWindow = document.createElement('span');
+          const rail = document.createElement('span');
+          digitWindow.className = 'growth-digit';
+          rail.className = 'growth-digit-rail';
+          rail.style.setProperty('--digit-start', startRow);
+          rail.style.setProperty('--digit-end', startRow + turns);
+          for (let row = 0; row < 30; row += 1) {
+            const cell = document.createElement('span');
+            cell.textContent = String(row % 10);
+            rail.append(cell);
+          }
+          digitWindow.append(rail);
+          odometer.append(digitWindow);
+        });
+        element.append(odometer, document.createTextNode(suffix));
+      };
+      growthNumbers.forEach(prepareCounter);
+      const growthObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            window.requestAnimationFrame(() => entry.target.classList.add('is-rolling'));
+            growthObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold:0.35 });
+      growthNumbers.forEach((number) => growthObserver.observe(number));
+    }
+
+    const modal = document.getElementById('video-modal');
+    const frame = document.getElementById('modal-frame');
+    const modalTitle = document.getElementById('modal-title');
+    const originalLink = document.getElementById('modal-original');
+    const closeModal = () => {
+      modal.close();
+      frame.src = 'about:blank';
+    };
+    document.querySelectorAll('.work-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        if (card.dataset.kind === 'youtube') {
+          window.open(card.dataset.url, '_blank', 'noopener,noreferrer');
+          return;
+        }
+        if (card.dataset.kind === 'instagram') {
+          window.open(card.dataset.url, '_blank', 'noopener,noreferrer');
+          return;
+        }
+        if (!modal.showModal) {
+          window.open(card.dataset.url, '_blank', 'noopener');
+          return;
+        }
+        const source = `https://www.instagram.com/${card.dataset.path === 'p' ? 'p' : 'reel'}/${card.dataset.id}/embed`;
+        modal.classList.add('is-reel');
+        modalTitle.textContent = card.dataset.label || 'Selected work';
+        originalLink.href = card.dataset.url;
+        originalLink.textContent = 'Open on Instagram ↗';
+        frame.src = source;
+        modal.showModal();
+      });
+    });
+    modal.querySelector('.modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+    modal.addEventListener('close', () => { frame.src = 'about:blank'; });
+
+    const photoModal = document.getElementById('experience-photo-modal');
+    const photoModalImage = photoModal.querySelector('.experience-photo-viewer > img');
+    const photoStack = document.querySelector('.experience-photo-stack');
+    const eventPhotos = Array.from(photoStack.querySelectorAll('img')).map((image) => ({ src:image.src, alt:image.alt }));
+    const photoCount = photoModal.querySelector('.experience-photo-count');
+    const previousPhoto = photoModal.querySelector('[data-photo-prev]');
+    const nextPhoto = photoModal.querySelector('[data-photo-next]');
+    let activePhoto = 0;
+    const showPhoto = (index) => {
+      activePhoto = Math.max(0, Math.min(index, eventPhotos.length - 1));
+      photoModalImage.src = eventPhotos[activePhoto].src;
+      photoModalImage.alt = eventPhotos[activePhoto].alt;
+      photoCount.textContent = `${String(activePhoto + 1).padStart(2, '0')} / ${String(eventPhotos.length).padStart(2, '0')}`;
+      previousPhoto.disabled = activePhoto === 0;
+      nextPhoto.disabled = activePhoto === eventPhotos.length - 1;
+    };
+    const closePhotoModal = () => photoModal.close();
+    photoStack.addEventListener('click', () => { showPhoto(0); photoModal.showModal(); });
+    previousPhoto.addEventListener('click', () => showPhoto(activePhoto - 1));
+    nextPhoto.addEventListener('click', () => showPhoto(activePhoto + 1));
+    photoModal.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft' && activePhoto > 0) { event.preventDefault(); showPhoto(activePhoto - 1); }
+      if (event.key === 'ArrowRight' && activePhoto < eventPhotos.length - 1) { event.preventDefault(); showPhoto(activePhoto + 1); }
+    });
+    photoModal.querySelector('.experience-photo-close').addEventListener('click', closePhotoModal);
+    photoModal.addEventListener('click', (event) => {
+      if (event.target === photoModal) closePhotoModal();
+    });
+    photoModal.addEventListener('close', () => { photoModalImage.removeAttribute('src'); });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
